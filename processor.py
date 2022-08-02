@@ -2,7 +2,11 @@ from actions import Actions
 from re import match
 
 action = {
-    Actions.play: ["play*"]
+    Actions.play: ["play*"],
+    Actions.get_wiki: ["wikipedia*"],
+    Actions.tell_joke: ["tell(.*?)joke", "say(.*?)joke", "joke"],
+    Actions.change_volume: ["set volume*", "volume*", "change volume*", "change loudness*", "set loudness*", "loudness*"],
+    Actions.set_gender: ["set gender*", "change gender*", "gender*", "sex*", "set sex*", "change sex*"]
 }
 
 action_keys = list(action.keys())
